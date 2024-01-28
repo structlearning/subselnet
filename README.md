@@ -96,7 +96,7 @@ optional arguments:
 ```
 
 ## Generate logits
-- First train the sampled architectures to generate training and testing logits for the training and testing idxs sampled before. Specifying None in the subset size selects the entire training set.
+- First train the sampled architectures to generate training and testing logits for the training and testing idxs sampled before. Specifying 0 in the subset size selects the entire training set.
 ```bash
 usage: train_full_partial.py [-h] [--subset_size SUBSET_SIZE]
                              [--dataset DATASET] [--root ROOT]
@@ -215,7 +215,6 @@ usage: tr_subset.py [-h] [--data_file DATA_FILE] [--targets_file TARGETS_FILE]
                     [--output_folder OUTPUT_FOLDER] [--ma_dropout MA_DROPOUT]
 
 optional arguments:
-  -h, --help            show this help message and exit
   --data_file DATA_FILE
                         Path to the data embeddings
   --targets_file TARGETS_FILE
@@ -251,7 +250,6 @@ usage: ind_subset.py [-h] [--data_file DATA_FILE]
                      [--num_classes NUM_CLASSES]
 
 optional arguments:
-  -h, --help            show this help message and exit
   --data_file DATA_FILE
                         Path to the data embeddings
   --targets_file TARGETS_FILE
